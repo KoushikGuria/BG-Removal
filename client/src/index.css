@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
+
+*{
+    font-family: Outfit;
+}
 
 .slider {
     appearance: none;
@@ -15,4 +20,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
+}
+
+.bg-layer {
+    background-image: url('/bg_layer.png');
 }
