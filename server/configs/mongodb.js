@@ -5,7 +5,7 @@ const connectDB = async () => {
         console.log("Database Connected");
     })
 
-    await mongoose.connect(`${process.env.MONGODB_URI}/MERN-Auth`)
+    await mongoose.connect(`${process.env.MONGODB_URI}/bg-removal`)
 }
 
 export default connectDB;

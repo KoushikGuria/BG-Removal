@@ -27,7 +27,8 @@ const clerkWebhooks = async (req, res) => {
                     lastName: data.last_name,
                     photo: data.image_url
                 }
-                await userModel.create(userData);
+                const response = await userModel.create(userData);
+                console.log(response);
                 res.json({});
 
                 break;
@@ -67,6 +68,7 @@ const userCredits = async (req, res) => {
         const { clerkId } = req.user;
 
         const userData = await userModel.findOne({ clerkId });
+        console.log(userData);
 
         res.json({ success: true, credits: userData.creditBalance });
 
